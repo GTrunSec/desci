@@ -1,0 +1,6 @@
+/.data
+# nixago: ignore-linked-files
+/.conform.yaml
+/lefthook.yml
+/treefmt.toml
+/.pdm-python

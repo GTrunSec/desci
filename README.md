@@ -1,1 +1,1 @@
-# jupyenv-next
+# example-package

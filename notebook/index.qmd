@@ -1,0 +1,37 @@
+---
+title: Overview
+date: 2023-12-27
+---
+
+# Getting Stared
+
+```bash
+git clone https://github.com/hardenedlinux/AISecurity-Research-Template
+cd AISecurity-Research-Template
+
+docker pull ghcr.io/hardenedlinux/aisecurity-research-template
+docker run --platform linux/amd64 -it -v "$(pwd):/work" --entrypoint bash ghcr.io/hardenedlinux/aisecurity-research-template:latest
+
+podman run --platform linux/amd64 -it -v "$(pwd):/work" --userns=keep-id --entrypoint bash ghcr.io/hardenedlinux/aisecurity-research-template-users:latest
+```
+- Actions:
+    + jupyterlab: just jupyterlab-run
+    + quarto: just quarto example <render/preview>
+    
+# Workflow
+
+```{python kernel="python-data-science"}
+#| code-fold: true
+
+from IPython.core.display import SVG
+import os
+
+os.environ["PATH"] += os.pathsep + "$PATH"
+SVG(filename='flow.svg')
+```
+
+
+# Acknowledgments
+
+- [Guidelines for secure AI system development
+](https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development)
